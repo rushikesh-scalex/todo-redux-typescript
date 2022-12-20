@@ -1,0 +1,20 @@
+.mainList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+.deleteBtn{
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+}
+.deleteBtn button {
+    padding: 8px;
+    background-color: red;
+    color: whitesmoke;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+}

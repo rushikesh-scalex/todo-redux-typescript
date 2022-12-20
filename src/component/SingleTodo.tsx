@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteTodoFromList, editTodoFromList } from "../redux/Actions";
+import "../Styles/SingleTodo.css"
 interface Props {
   id: number;
   data: string;
@@ -18,10 +19,12 @@ const SingleTodo: React.FC<Props> = ({ id, data }) => {
     setEdit(false);
   };
   return (
-    <form onSubmit={(e) => handleSubmit(e, id, editTodo)}>
-      {edit ? (
+    <form className="singleTodo" onSubmit={(e) => handleSubmit(e, id, editTodo)}>
+     <div className="mainData">
+     {edit ? (
         <>
-          <input
+          <input className="editTodoInput"
+            autoFocus={true}
             type="text"
             value={editTodo}
             onChange={(e) => setEditTodo(e.target.value)}
@@ -34,22 +37,25 @@ const SingleTodo: React.FC<Props> = ({ id, data }) => {
           </div>
         </>
       )}
+     </div>
+      <div>
       <span>
-        {" "}
         <i
+          title="Delete"
           onClick={() => dispatch(deleteTodoFromList(id))}
-          className="fa fa-trash"
-        ></i>{" "}
-      </span>{" "}
+          className="fa fa-trash span_icons"
+        ></i>
+      </span>
       <span>
-        {" "}
         <i
+          title="Edit"
           onClick={() => {
             setEdit(true);
           }}
-          className="fa-solid fa-pen-to-square"
-        ></i>{" "}
+          className="fa-solid fa-pen-to-square span_icons"
+        ></i>
       </span>
+      </div>
     </form>
   );
 };

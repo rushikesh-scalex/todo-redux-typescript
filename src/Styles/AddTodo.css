@@ -1,0 +1,23 @@
+.mainDiv{
+    padding: 12px;
+    background-color: rgba(241, 235, 235,0.6);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.mainDiv input {
+    width: 40%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    font-size: large;
+    border-radius: 12px;
+
+}
+.btn-icons{
+    align-self: center;
+    /* border: 1px solid black; */
+    padding: 5px;
+    background-color: rgb(241, 235, 235);
+    margin: 2px;
+}
