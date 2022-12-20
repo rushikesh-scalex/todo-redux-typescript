@@ -6,15 +6,15 @@ import { RootState } from "../redux/Store";
 import { useDispatch } from "react-redux";
 import { removeAllTodos } from "../redux/Actions";
 const App = () => {
-  const {list} = useSelector((state:RootState)=>state.todoReducer);
+  const { list } = useSelector((state: RootState) => state.todoReducer);
   const dispatch = useDispatch();
   return (
     <>
       <AddTodo />
-      <List/>
-      {list.length > 0 ? 
-      <button onClick={()=>dispatch(removeAllTodos())}
-      >Delete All</button> : null}
+      <List />
+      {list.length > 0 ? (
+        <button onClick={() => dispatch(removeAllTodos())}>Delete All</button>
+      ) : null}
     </>
   );
 };

@@ -1,6 +1,5 @@
 import { ADD_TODO, DELETE_TODO, EDIT_TODO, REMOVE_ALL } from "./Action_Types";
-import UniqueID from '../Utils/UniqueID';
-
+import UniqueID from "../Utils/UniqueID";
 
 export const addTodoToList = (data: string) => {
   return {
@@ -17,17 +16,17 @@ export const deleteTodoFromList = (id: number) => {
     payload: id,
   };
 };
-export const removeAllTodos = () =>{
-  return{
-    type: REMOVE_ALL
-  }
+export const removeAllTodos = () => {
+  return {
+    type: REMOVE_ALL,
+  };
 };
-export const editTodoFromList = (id:number, data:string) =>{
-      return{
-        type: EDIT_TODO,
-        payload:{
-          id:id,
-          data:data
-        }
-      }
-}
+export const editTodoFromList = (id: number, data: string) => {
+  return {
+    type: EDIT_TODO,
+    payload: {
+      id: id,
+      data: data,
+    },
+  };
+};

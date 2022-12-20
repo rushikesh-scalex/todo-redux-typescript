@@ -1,4 +1,4 @@
-const UniqueID = () =>{
-    return Date.now();
+const UniqueID = () => {
+  return Date.now();
 };
 export default UniqueID;

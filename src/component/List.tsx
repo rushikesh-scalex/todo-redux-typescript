@@ -8,10 +8,8 @@ const List = () => {
   // console.log(list);
 
   const display = list.map((ele) => {
-    const { id , data } = ele;
-    return (
-     <SingleTodo key={id} id={id} data={data}/>
-    );
+    const { id, data } = ele;
+    return <SingleTodo key={id} id={id} data={data} />;
   });
   return <>{display}</>;
 };
